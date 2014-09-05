@@ -1,7 +1,7 @@
 ## What is it?
-The build system I use for the DVD version of [Second Shift](http://www.secondshiftpodcast.com), an audio theater podcast that ran from 2006 to 2011. 
+The build system I use for the DVD version of [Second Shift](http://www.secondshiftpodcast.com), an audio theater podcast that ran from 2006 to 2011. It provides the complete series in one place with a nice web interface that supports dynamically turning commentary tracks on and off (where applicable), bonus content, etc. 
 
-The purpose of this archive is to provide a safe place for the sources, and to give people with similar projects a framework for creating their own. 
+The purpose of this repo is to provide a safe place for the sources, and to give people with similar projects a framework for creating their own. 
 
 If you are technical and curious how everything works, most of the interesting stuff is in `parse.py`, which gathers data to feed to templates in the various page directories (e.g. `Episode/`) to generate the site, and `src/js/base.js`, where all the fancy front-end stuff happens.
 
