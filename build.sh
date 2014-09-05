@@ -1,6 +1,6 @@
 #!/bin/bash
 T=$(date +%Y%m%d%H%H%M%S)
-SOURCE_DIRS="Bonus CastCrew Commentaries Episodes Notes Scripts src"
+SOURCE_DIRS="About Bonus CastCrew Episodes src"
 
 function content() {
     for d in $SOURCE_DIRS; do mkdir -p $d; done

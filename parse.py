@@ -13,8 +13,11 @@ site_dir = "Site"
 # TODO: For now the trailing "/" is needed, but it really shouldn't be
 content_prefix = "Files/"
 
-epFnRe1 = re.compile("(\d)\.(\d\d[a-z]?)-.*\.")
-epFnRe2 = re.compile("2ndShift_yr0(\d)_Ep(\d\d[a-z]?)\.")
+showName = "SecondShift"
+epFnRes = (
+    re.compile("(\d)\.(\d\d[a-z]?)-.*\."),
+    re.compile(".*_yr(\d+)_Ep(\d\d[a-z]?)\."),
+)
 
 class xmlData(object):
     def __init__(self, e):
@@ -74,21 +77,26 @@ class EpData(object):
 
 ## EPISODES ##
 d = E.parse("Episodes/data.xml")
-for s in ("mp3","ogv"):
+for s in ("mp3","ogg"):
     sp = os.path.join("Episodes",s)
     if not os.path.exists(sp):
+        print "Creating dir: %s" % sp
         os.makedirs(sp)
 eps = {}
 for ep in d.xpath("//item"):
     link = ep.find("link").text
     fn_link = link.split("/")[-1]
-    m = epFnRe1.match(fn_link)
+    for epFnRe in epFnRes:
+        m = epFnRe.match(fn_link)
+        if m is not None:
+            break
     if m is None:
-        m = epFnRe2.match(fn_link)
-        if m is None:
-            continue
+        continue
     (s_num,e_num) = m.groups()
-    basefn = "SecondShift_Ep%s%s" % (s_num,e_num)
+    # Convert Season "01" to "1". Will remove this after I've been
+    # un-lazy enough to rename my episode files. ;)
+    s_num = str(int(s_num))
+    basefn = "%s_Ep%s%s" % (showName,s_num,e_num)
     
     ed = EpData()
     ed.epid = "%s%s" % (s_num,e_num)
@@ -102,16 +110,15 @@ for ep in d.xpath("//item"):
     
     print "%s (%s/%s)" % (basefn,s_num,e_num) 
     fn_mp3 = "Episodes/mp3/%s.mp3" % (basefn)
-    if os.path.exists(fn_mp3):
-        ed.fn_mp3 = fn_mp3
-    else:
-        print "Downloading %s" % link
+    if not os.path.exists(fn_mp3):
+        print "Downloading %s to %s" % (link, fn_mp3)
         try:
             data = urllib.urlopen(link).read()
             open(fn_mp3,"w").write(data)
         except Exception, e:
             sys.stderr.write("FATAL: No file for %s, and failed to download.\n URL: %s\n:Error: %s" % (fn_mp3,link,e))
             sys.exit()
+    ed.fn_mp3 = fn_mp3
         
     fn_ogg = "Episodes/ogg/%s.ogg" % (basefn)
     if os.path.exists(fn_ogg):
@@ -124,6 +131,10 @@ for ep in d.xpath("//item"):
         except Exception, e:
             sys.stderr.write("Could not convert mp3 to ogg. Do you have ffmpeg installed?\n Command: %s\n Error: %s\n" % (command,e))
             sys.exit()
+
+    fn_commentary = "Episodes/commentaries/mp3/%s-commentary.mp3" % basefn
+    if os.path.exists(fn_commentary):
+       ed.fn_commentary = fn_commentary
         
     fn_script = "Episodes/scripts/%s.pdf" % basefn
     if os.path.exists(fn_script):
@@ -164,10 +175,6 @@ for ep in d.xpath("//item"):
                 props.update(json.load(open(props_override,"r")))
             f = EpAttachment(**props)
             ed.notes.append(f)
-        
-    fn_commentary = "Episodes/commentaries/mp3/%s-commentary.mp3" % basefn
-    if os.path.exists(fn_commentary):
-       ed.fn_commentary = fn_commentary
        
     for e in ep.xpath(".//file"):
         path = e.get("path")
