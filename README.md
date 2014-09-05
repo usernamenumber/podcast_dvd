@@ -6,7 +6,7 @@ The purpose of this archive is to provide a safe place for the sources, and to g
 If you are technical and curious how everything works, most of the interesting stuff is in `parse.py`, which gathers data to feed to templates in the various page directories (e.g. `Episode/`) to generate the site, and `src/js/base.js`, where all the fancy front-end stuff happens.
 
 ## How do I use it?
-Much of the content is specific to Second Shift, but it shouldn't be difficult to customize, especially if you are familiar with some of the technologies used, particularly [jQuery](http://api.jquery.com/), and [Django templates](http://django.readthedocs.org/en/latest/topics/templates.html). 
+Much of the content is specific to Second Shift, but it shouldn't be difficult to customize if you are familiar with some of the technologies used, particularly [jQuery](http://api.jquery.com/), and [Django templates](http://django.readthedocs.org/en/latest/topics/templates.html). 
 
 If you want to customize it, do the following:
 
