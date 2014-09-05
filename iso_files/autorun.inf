@@ -1,0 +1,6 @@
+[autorun]
+icon=favicon
+shellexecute=index.html
+open=index.html
+UseAutoPlay=1
+label=SecondShiftComplete

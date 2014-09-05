@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" version="1.1" width="179.13203" height="192.7023" id="svg3098">
+  <title id="title3140">Talking</title>
+  <defs id="defs3100"/>
+  <g transform="translate(-47.57684,-590.29675)" id="layer1">
+    <g transform="matrix(0.52820735,0,0,0.52820735,96.261944,536.09156)" id="g3614">
+      <path d="m 64.281247,109.51786 c -67.9203399,0 -126.67655,39.17065 -154.9375,96.15625 l 126.15625,85.78125 -117.9375,82.3125 c 30.53251,48.90265 84.8195501,81.4375 146.71875,81.4375 95.466373,0 172.875003,-77.37738 172.875003,-172.84375 0,-95.46637 -77.40863,-172.84375 -172.875003,-172.84375 z" id="path2816" style="fill:#c8b7b7;stroke:none"/>
+      <path d="m -422.85713,236.6479 a 8.5714283,10 0 1 1 -17.14286,0 8.5714283,10 0 1 1 17.14286,0 z" transform="translate(477.14286,-28.571429)" id="path3598" style="fill:#c8b7b7;stroke:#000000;stroke-width:19.10000038;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"/>
+      <path d="M 64.28125,102.8125 C 0.46486152,98.744785 -110.59592,160.17212 -89.559007,222.73074 -49.71445,244.1395 54.326528,297.87656 -33.889346,331.29872 -101.49373,346.8963 -91.562269,416.64482 -34.803068,438.83699 52.608786,497.26173 185.23148,462.90067 228.5748,365.75157 276.86345,271.76942 225.87682,144.31826 124.24121,112.6354 105.00937,105.9848 84.640097,102.55006 64.28125,102.8125 z m 0,19.125 c 119.06161,-6.59238 208.48737,144.75145 142.07693,245.19992 -45.32495,81.09936 -160.756671,106.01592 -237.130856,54.33871 -76.460884,-56.5201 52.35124,-87.1224 71.237868,-129.5852 C 23.987504,245.97332 -94.482188,240.46801 -61.954785,179.13979 -28.768577,145.32059 15.800416,120.67948 64.28125,121.9375 z" id="path3600" style="font-size:medium;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-indent:0;text-align:start;text-decoration:none;line-height:normal;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;block-progression:tb;writing-mode:lr-tb;text-anchor:start;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:19.10000038;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Andale Mono;-inkscape-font-specification:Andale Mono"/>
+    </g>
+  </g>
+  <metadata>
+    <rdf:RDF>
+      <cc:Work>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/publicdomain/"/>
+        <dc:publisher>
+          <cc:Agent rdf:about="http://openclipart.org/">
+            <dc:title>Open Clip Art Library</dc:title>
+          </cc:Agent>
+        </dc:publisher>
+        <dc:title>Talk</dc:title>
+        <dc:date>2012-04-08T06:53:45</dc:date>
+        <dc:description>Abstract profile of talking head, from the facilitation set.</dc:description>
+        <dc:source>http://openclipart.org/detail/169420/talk-by-bitterjug</dc:source>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>bitterjug</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>abstract</rdf:li>
+            <rdf:li>clip art</rdf:li>
+            <rdf:li>clipart</rdf:li>
+            <rdf:li>mouth</rdf:li>
+            <rdf:li>open mouth</rdf:li>
+            <rdf:li>presentation</rdf:li>
+            <rdf:li>profile</rdf:li>
+            <rdf:li>speach</rdf:li>
+            <rdf:li>speaking</rdf:li>
+            <rdf:li>talk</rdf:li>
+            <rdf:li>talking head</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License rdf:about="http://creativecommons.org/licenses/publicdomain/">
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Reproduction"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#Distribution"/>
+        <cc:permits rdf:resource="http://creativecommons.org/ns#DerivativeWorks"/>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+</svg>

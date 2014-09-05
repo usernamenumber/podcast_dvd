@@ -1,0 +1,575 @@
+.extlink:after {
+    content: "(external link)";
+}
+
+#content + .footer {
+    width: 735px;
+    background-image:url('../img/bg-dark.gif');
+    padding: 0px 10px 10px 10px;
+    font-size: 80%;
+    color: white;
+    font-style: italic;
+}
+
+#content {
+    width: 735px;
+    background-image:url('../img/bg-dark.gif');
+    padding: 10px;
+}
+
+#season2 #content {
+    padding: 0px 10px 10px 10px;
+}
+
+#tabs {
+    width:756px;
+    border-radius:0;
+    border:none;
+    text-align:center;
+    padding-bottom:0px;
+    border:none;
+    padding:0;
+    margin:0;
+    background:url('../img/header-bottom.png'); 
+    height:39px;
+}
+.tabs_container a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size:110%;
+    margin-left:15px;
+    margin-right:15px;
+}
+.tabs_container a:focus {
+    outline:none;
+}
+.tabs_container-nav li {
+    display:inline;
+}
+#tabs a:hover {
+    border-bottom: thin solid green;
+}
+
+
+body {
+  background-image:url('../img/bg-light.gif');
+}
+
+.footer {
+    clear: both;
+}
+
+.footer a {
+    color: inherit;
+}
+
+.ep {
+    background-color: #197f2b;
+    text-align:left;
+    margin: 10px;
+    margin-top: 0px;
+    padding-bottom: 20px;
+    padding: 10px;
+    border-radius:10px;
+    border: thick solid black;
+    vertical-align: top;
+}
+
+.ep .main a {
+    text-decoration: none;
+}
+
+.header {
+    width:760px;
+    height:152px;
+    background-image:url('../img/header-top.png');
+}
+
+.headerbar {
+    clear: both;
+    margin-bottom: 5px;
+    position: relative;
+    padding-left: 42px;
+    text-align:left;
+    cursor: pointer;
+}
+
+.epList {
+    margin-top: 0;
+    padding-top:10px;
+}
+
+.title {
+    font-weight:bold;
+    font-size:150%;
+    color: black;
+}
+.released {
+    font-style: italic;
+}
+.duration {
+    font-style: italic;
+}
+.buttons {
+    text-align:center;
+    margin-top:20px    
+}
+
+.epNumber {
+    width:40px;
+    height:40px;
+    text-align: center;
+    border: thick solid black; 
+    background-color:lightyellow;
+    border-radius:100%;
+    padding:10px;
+    position: absolute;
+    left: -30px;
+    top: -30px;
+    float: left;
+    font-family: SecondShift;
+    font-size: 150%;
+    padding-top:5px;
+    cursor:pointer;
+}
+
+.epNumber > .toggle {
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.epNumber:first-letter {
+    font-size: 110%;
+    font-weight: bold;
+}
+
+.epOther {
+    text-align: center;
+    border: thin solid orange;
+    background-color: lightcyan;
+    border-radius:100%;
+    padding:10px;
+    position: relative;
+    top: -55px;
+    left: -45px
+}
+
+.epHeading {  
+    width: 100%;
+    cursor: pointer;
+}
+
+.epHeading .title {
+    float: left;
+    color: lightyellow;
+    text-decoration: overline;
+}
+
+.epHeading .subtitle {
+    float: right;
+    color: lightyellow;
+}
+
+/*audio {
+    max-width: 250px;
+}*/
+
+.headerbar .audiobar {
+    width: 50%;
+    float:right;
+    text-align:right;
+}
+
+.main .audiobar {
+    
+    width: 100%;
+    text-align:center;
+}
+
+
+.audiohelp_text {
+    font-size:80%;
+    color: lightgrey;
+    font-style: italic;
+    text-align: center;
+    position: relative;
+}
+
+.audiohelp {
+    cursor: pointer;
+}
+
+.ep .main li {
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-style: italic;
+    text-align: center;
+}
+
+.summary {
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.ep .description {
+    font-style:italic;
+    font-size: 90%;
+    color: gray;
+    padding-right: 10px;
+}
+
+.bonus .description {
+    font-style:italic;
+    font-size: 90%;
+    color: gray;
+    padding-right: 10px;
+}
+
+.section > .description {
+    border-bottom: thin solid gray;
+    margin-bottom: 10px;
+}
+
+.bonus li .description {
+    padding-bottom: 20px;
+}
+
+.bonus a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main {
+    background-color: #fcfcf0;  
+    border-radius: 10px;
+    padding: 5px;
+    border: thin solid gray;
+}
+
+.button {
+  height: 35px;
+  width: 110px;   
+  display: inline-block;  
+}
+
+.play {
+    background-image: url('../img/curve_arrow-right.png');
+    background-repeat: no-repeat;
+}
+
+div.commentary {
+    background-image: url('../img/commentary-teeny.png');
+    background-repeat: no-repeat;
+}
+
+.commentary_toggle {
+    color:  lightgray;
+    font-style: italic;
+    width: 25px;
+    /*background-image: url('../img/commentary-teeny.png');*/
+    display: inline-block;
+}
+
+.inactive {
+    opacity: 0.5;
+}
+
+
+.ep.active .epNumber {
+    background-color: rgb(255,255,150);
+}
+
+.left {
+    float: left;
+}
+
+.main h3 {
+    font-size: 105%;
+    color: gray;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    border-bottom: thin solid black;
+    padding: 5px;
+    padding-left: 0px;
+}
+
+.main > * {
+    margin-left: 10px;
+}
+
+.main a {
+    font-size: 100%;
+    font-weight: normal;
+    margin-left: none;
+}
+
+.main > h3:first-child {
+    margin-top: 5px;
+}
+
+.main > h3 {
+    margin-top: 10px;
+    color: black;
+}
+
+.main > div:last-child {
+    margin-bottom: 10px;
+}
+
+.main h3:first-letter {
+    font-weight: bold;
+    font-size: 110%;
+}
+
+.main > div {
+    margin-left: 15px;
+}
+
+.details .released {
+    font-weight: normal;  
+}
+
+.details .duration {
+    font-weight: normal;   
+}
+
+.buttons {
+    margin-top: 0px;
+    height: 100%;
+    height: 35px;
+    width: 110px;   
+}
+
+.main a {
+    color: black;
+}
+
+.fallback_buttons > a {
+    margin-left: 2.5px;
+    margin-right:2.5px;
+}
+
+.fallback_buttons {
+    text-align:left;
+}
+
+iframe {
+    height: 500px;
+    width: 97%;
+}
+
+.ep .button {
+  height: 35px;
+  width: 110px;   
+  /*display: inline-block;  */
+}
+
+li.script {
+    list-style-image: url('../img/registry-book.png');
+}
+li.ct {
+    list-style-image: url('../img/chonklatime-teeny.png');
+}
+
+li.audio {
+    list-style-image: url('../img/audio.png');
+}
+
+li.video {
+    list-style-image: url('../img/video.png');
+}
+
+li.feedback {
+    list-style-image: url('../img/commentary_face-teeny.png');
+}
+
+li.commentary {
+    list-style-image: url('../img/commentary-teeny.png');
+}
+
+li.feedback a::after {
+    content: " (external link)");
+}
+
+li.ourhideous {
+    list-style-image: url('../img/2010.png');
+}
+
+li {
+    list-style-image: url('../img/2slogo-circle_only-teeny.png');
+}
+
+.toggler {
+    cursor:pointer;
+}
+
+.section {
+    text-align: left;
+    position: relative;
+}
+
+.bonus .section {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.todo {
+    border: thick solid red;
+    background-color: gray;
+    text-align: left;
+    padding: 10px;
+}
+
+.todo li {
+    list-style-image: none;
+}
+
+.todo:before {
+    font-weight: bold;
+    font-size: 110%;
+    content: "TODO: ";
+}
+
+p {
+    text-align: left;
+}
+
+.about p:first-of-type:first-letter {
+    font-weight: bold;
+    font-size: 110%;
+}
+
+.about .section {
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 110%;
+}
+
+.about .title {
+    text-align: center;
+}
+
+.salutation {
+    text-align: right;
+    font-style: italic;
+}
+
+.section {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.castcrew .section {
+    border: thin solid brown;
+}
+
+.castcrew .title {
+    text-align: left;
+    font-family: SecondShift;
+}
+.castcrew .subtitle {
+    text-align: left;
+}
+
+.castcrew .footer {
+}
+
+.castcrew .heading {
+    margin-bottom: 10px;
+}
+
+.castcrew .pic {
+    margin-right: 10px;
+}
+
+.castcrew .pic img {
+    max-width: 220px;
+}
+
+#ct-orig-link {
+    display:block;
+}
+
+.postfix {
+    font-size:95%;
+    font-style: italic;
+    color: gray;
+}
+
+.bonus audio {
+    text-align: left;
+}
+
+.freesound {
+    margin-bottom: 0px;
+}
+
+.freesound_details {
+    margin: top;
+    margin-left:10px;
+    white-space: pre-wrap;
+    font-style: italic;
+}
+
+.freesound pre {
+    margin: 0;
+}
+
+.freesound a {
+    text-decoration: underline;
+}
+
+#topbuttons {
+    /*margin: 0px 0px 0px 55px;*/
+    padding-right: 10px;
+    clear: both;
+    text-align: right;
+    width: 100%;
+}
+
+#topbuttons a {
+    text-decoration: none;
+}
+
+#topbuttons ul {
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+#topbuttons li {
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-image: none;
+    cursor: pointer;
+}
+
+#topbuttons img {
+    margin: 0;
+    padding: 0;
+}
+
+#topbuttons_label {
+    display:inline-block;
+    margin-left: 20px;
+    color : gray;
+    height: 25px;
+    vertical-align: middle;
+}
+
+.section .topbuttons {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+@font-face {
+    font-family: SecondShift;
+    src: url('../fonts/jorvik.TTF');
+}

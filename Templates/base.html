@@ -1,0 +1,33 @@
+<!doctype html>
+ 
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Second Shift</title>
+  <script type="text/javascript" src="{{prefix}}src/js/jquery-ui-1.10.3/jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="{{prefix}}src/js/jquery-ui-1.10.3/ui/jquery-ui.js"></script>
+  <script type="text/javascript" src="{{prefix}}src/js/base.js"></script>
+  <link rel="stylesheet" href="{{prefix}}src/css/base.css">
+  <style>
+    {% block extrastyle %}{% endblock %}
+  </style>
+</head>
+<body><center>
+    <div class="header">&nbsp;</div>
+    <div id="tabs" class="tabs_container">
+          <a href="{{prefix}}about.html">About</a>
+          <a href="{{prefix}}season1.html">Season One</a>
+          <a href="{{prefix}}season2.html">Season Two</a>
+          <a href="{{prefix}}castcrew.html">Cast and Crew</a>
+          <a href="{{prefix}}bonus.html">Bonus Content</a>
+      </div>
+      <div id="content">
+     {% block main %}
+     {% endblock %}
+     </div>
+     <div class="footer">
+        &copy; 2013 Blue Sky Red Design.&nbsp;&nbsp;Design and Programming by Brad Smith.&nbsp;&nbsp;Art by Lily Gist and <a href="{{prefix}}image_credits.html">openclipart.com</a>.
+     </div>
+</center>
+</body>
+</html>

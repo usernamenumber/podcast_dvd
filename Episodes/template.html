@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+
+{% block extrastyle %}
+    #content {
+        padding-top: 0px;
+    }
+{% endblock %}
+
+{%block main %}
+<center>
+<div id="{{page}}">
+<div id="topbuttons">
+<ul>
+    <li class="folder">
+        <a target="_blank" href="Episodes/mp3/"><img 
+            title="open folder" 
+            src="src/img/folder.png"
+        > 
+        </a>
+    </li>
+</ul>
+    <!--<span id="topbuttons_label"></span>-->
+</div>
+<div class="eplist">
+{% for ep in eps %}
+                    <div class="ep" id="{{ep.epid}}">
+                        <div class="headerbar">
+                                <div class="epNumber">
+                                    {{ep.s_num}}.{{ep.e_num}}
+                                    <div class="toggle">+</div>
+                                </div>
+                                <div class="epHeading">
+                                    <div class="title">{{ep.title}}</div> 
+                                     <div class="subtitle">
+                                        <div>
+                                            Released: <span class="released">{{ep.date}}</span>
+                                       </div>
+                                       <div>
+                                            Running time: <span class="duration">{{ep.duration}}</span>
+                                        </div>
+                                    </div>  
+                                 </div> 
+                            <div class="footer" style="height:5px">&nbsp;</div>
+                            
+                         </div>
+                        <div class="main"> 
+                            <div 
+                                id = "audiobar-{{ep.epid}}"
+                                class="audiobar"
+                                data-ep_mp3="{{ep.fn_mp3}}"
+                                data-ep_ogg="{{ep.fn_ogg}}"
+                                {% if ep.fn_commentary %}
+                                    data-cm_mp3="{{ep.fn_commentary}}"
+                                {% endif %}
+                            >
+                                <div class="fallback_buttons">
+                                    <ul>
+                                        <li class="audio">
+                                            <a 
+                                                id="mp3link_{{ep.epid}}"
+                                                target="_blank" 
+                                                href="{{ep.fn_mp3}}"
+
+                                             >
+                                                Listen to the episode
+                                            </a>
+                                        </li>                                        
+                                        {% if ep.fn_commentary %}
+                                        <li class="commentary">
+                                            <a 
+                                                id="cmlink_{{ep.epid}}"
+                                                target="_blank" 
+                                                href="{{ep.fn_commentary}}"
+                                             >
+                                                Listen to the commentary
+                                           </a>
+                                       </li>
+                                        {% endif %}
+                                    </ul>
+                                </div>
+                            </div>                         
+                            <h3>Summary</h3>
+                            <div class="summary">                            
+                            {{ep.summary}}
+                            </div>        
+                            
+                            {% if ep.files %}
+                            <h3>Files</h3>
+                            <ul class="files">
+                                {% for file in ep.files %}
+                                     <li class="{{file.css_class|default:'file'}}">
+                                        <a  target="_blank" 
+                                            href="{{file.path}}" 
+                                            {% if file.display == 'extlink' %}
+                                                class='extlink'
+                                            {% endif %}
+                                         >
+                                                {{ file.name }}
+                                        </a>
+                                        {% if file.description %}
+                                        <div class="description">
+                                            {{ file.description }}
+                                        </div>
+                                        {% endif %}
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                            
+                            {% if ep.notes %}
+                            <h3>Listener Notes and Analysis (may contain spoilers!)</h3>
+                            <ul class="notes">
+                              {% for note in ep.notes %}
+                                <li class="{{note.css_class|default:'note'}}" data-display="{{note.display}}">
+                                    <a href="{{note.path}}" target="_blank">
+                                   {{note.name}}
+                                    </a>
+                                    {% if note.description %}
+                                        <div class="description">
+                                         {{note.description}}
+                                        </div>
+                                    {% endif %}
+                                </li>
+                             {%endfor %}
+                            </ul>
+                            {% endif %}                            
+                            
+                            <h3>Production Details</h3>
+                            <div class="details">
+                                <div>
+                                    Released: <span class="released">{{ep.date}}</span>
+                               </div>
+                               <div>
+                                    Running time: <span class="duration">{{ep.duration}}</span>
+                                </div>
+                                {% if ep.freesound %}
+                                    <div class="freesound">
+                                        This episode used sound the following sound effects from the <a target="_blank" href="http://freesound.org/">Freesound Project</a>:
+                                        <div class="freesound_details">{{ep.freesound}}</div>
+                                    </div>  
+                                {% endif %}
+                            </div>                          
+                        </div>
+                    </div>  
+{% endfor %}
+</div></div>
+</center>
+{% endblock %}
