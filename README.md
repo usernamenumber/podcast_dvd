@@ -6,7 +6,7 @@ The purpose of this repo is to provide a safe place for the sources, and to give
 ## How does it work?
 If you are technical and curious aboute the code, the most interesting stuff is in `parse.py` and `src/js/base.js`. See below for details.
 
-The build process is controlled by `build.sh`, does the following (among other things):
+The build process is controlled by `build.sh`, which does the following (among other things):
 * Runs `parse.py`, which looks in each of the page subdirectories (Episodes, CastCrew, About, etc) and uses the Django template therein (`template.html`), along with data in `data.xml` if present, to build HTML for each page into the `Site/` subdirectory.
 * Downloads episode MP3s and converts them to OGGs (necessary for HTML5 audio in some browsers) as necessary
 * rsyncs all the site data (episodes, images, javascripts, etc) into the `Site/` subdirectory.
