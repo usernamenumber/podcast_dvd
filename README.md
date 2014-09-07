@@ -3,7 +3,19 @@ The build system I use for the DVD version of [Second Shift](http://www.secondsh
 
 The purpose of this repo is to provide a safe place for the sources, and to give people with similar projects a framework for creating their own. 
 
-If you are technical and curious how everything works, most of the interesting stuff is in `parse.py`, which gathers data to feed to templates in the various page directories (e.g. `Episode/`) to generate the site, and `src/js/base.js`, where all the fancy front-end stuff happens, including leaving a more basic player interface in place if javascript isn't enabled. .
+## How does it work?
+If you are technical and curious aboute the code, the most interesting stuff is in `parse.py` and `src/js/base.js`. See below for details.
+
+The build process is controlled by `build.sh`, does the following (among other things):
+* Runs `parse.py`, which looks in each of the page subdirectories (Episodes, CastCrew, About, etc) and uses the Django template therein (`template.html`), along with data in `data.xml` if present, to build HTML for each page into the `Site/` subdirectory.
+* Downloads episode MP3s and converts them to OGGs (necessary for HTML5 audio in some browsers) as necessary
+* rsyncs all the site data (episodes, images, javascripts, etc) into the `Site/` subdirectory.
+* Builds an ISO from the contents of `Site/`
+  * *Note:* This step currently uses OSX-specific tools. If you're on another OS, you can run `build.sh content` to just populate `Site/`, and then use local tools (e.g. mkisofs) to build the ISO.
+
+It's also worth noting that the episode pages are designed to be able to play under as many circumstances as possible:
+* The HTML produced by `build.sh` has links to open each file, without requiring HTML5 or Javascript
+* If HTML5 and Javascript are both active, the code in `src/js/base.js` replaces the simple links with a fancier player (which still provides a button for opening the file in an external player)
 
 ## How do I use it?
 Much of the content is specific to Second Shift, but it shouldn't be difficult to customize if you are familiar with some of the technologies used, particularly [jQuery](http://api.jquery.com/), and [Django templates](http://django.readthedocs.org/en/latest/topics/templates.html). 
