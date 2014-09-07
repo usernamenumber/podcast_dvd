@@ -1,5 +1,5 @@
 ## What is it?
-The build system I use for the DVD version of [Second Shift](http://www.secondshiftpodcast.com), an audio theater podcast that ran from 2006 to 2011. It provides the complete series in one place with a nice web interface that supports dynamically turning commentary tracks on and off (where applicable), bonus content, etc. 
+The build system for creating MP3 DVD versions of [Second Shift](http://www.secondshiftpodcast.com), an audio theater podcast that ran from 2006 to 2011. It provides the complete series in one place with a nice web interface that supports dynamically turning commentary tracks on and off (where applicable),and more. 
 
 The purpose of this repo is to provide a safe place for the sources, and to give people with similar projects a framework for creating their own. 
 
