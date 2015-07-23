@@ -20,7 +20,7 @@
 <keywords>second shift, blue sky red, Podplay, podiobook, fantasy, serial, radio play, original</keywords>
 
 
-<file path="Scripts/SecondShift_Ep101-early_draft.pdf" css_class="script" name="Early draft script">One of Andrea's draft scripts for the pilot, from before Brandon and John joined the team. Notable differences include Arkahn being named Arkady, and Jareth being an elf!</file>
+<file path="Episodes/scripts/SecondShift_Ep101-early_draft.pdf" css_class="script" name="Early draft script">One of Andrea's draft scripts for the pilot, from before Brandon and John joined the team. Notable differences include Arkahn being named Arkady, and Jareth being an elf!</file>
 
 <file path="Bonus/Pilot/working_pilot.mp3" css_class="audio" name="Early pilot recording">A demo recording of yet another early script.</file>
 
@@ -683,8 +683,8 @@ By acclivity (http://freesound.iua.upf.edu/usersViewSingle.php?id=37876)
 <duration>00:51:04</duration>
 <keywords>second shift, blue sky red, Podplay, podiobook, fantasy, serial, radio play, original</keywords>
 
-    <file path="Scripts/SecondShift_Ep212.pdf" css_class="script">Recording Script (for both parts)</file>
-    <file path="Scripts/SecondShift_Ep212-alt.pdf" css_class="script" name="Alt Scenes">There were some disagreements with regard to certain plot points in this episode. No one seems to remember exactly what those disagreements were, but as a compromise a set of "alternate" scenes were written and recorded, so we could decide which ones to use during post-production. Most of these ended up in the final version (one reason the episode became so long), with a few modifications and cuts.</file>
+    <file path="Episodes/scripts/SecondShift_Ep212.pdf" css_class="script">Recording Script (for both parts)</file>
+    <file path="Episodes/scripts/SecondShift_Ep212-alt.pdf" css_class="script" name="Alt Scenes">There were some disagreements with regard to certain plot points in this episode. No one seems to remember exactly what those disagreements were, but as a compromise a set of "alternate" scenes were written and recorded, so we could decide which ones to use during post-production. Most of these ended up in the final version (one reason the episode became so long), with a few modifications and cuts.</file>
 </item> 
 
 
@@ -826,7 +826,7 @@ By evnthrizn (http://www.freesound.org/usersViewSingle.php?id=1148959)
 
 
 <files>
-    <file path="Scripts/SecondShift_Ep216-early_draft.pdf" css_class="script">Early draft script</file>
+    <file path="Episodes/scripts/SecondShift_Ep216-early_draft.pdf" css_class="script" name="Early draft script">Including the original (and very different) final scene.</file>
 </files>
 </item> 
 
